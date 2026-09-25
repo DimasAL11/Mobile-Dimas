@@ -9,22 +9,27 @@
     tools:context=".pertemuan4.FourthActivity">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnkembali"
         android:layout_width="152dp"
         android:layout_height="53dp"
+        android:layout_marginTop="172dp"
         android:text="kembali"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="403dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="254dp"
         android:layout_height="33dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="160dp"
         android:text="@string/fourth"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="23dp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="174dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
