@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.tif_dimas.Pertemuan5.FifthActivity
 import com.example.tif_dimas.databinding.ActivityMainBinding
 import com.example.tif_dimas.databinding.ActivityThirdBinding
 import com.example.tif_dimas.pertemuan4.FourthActivity
@@ -33,7 +34,12 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
             startActivity(intent)
+        }
 
+        binding.btntofifth.setOnClickListener {
+            //Mengambil value dari inputNama dan menampilkan di Logcat
+            val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
         }
         
     }
