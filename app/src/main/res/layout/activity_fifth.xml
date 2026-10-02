@@ -45,7 +45,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="web view"
-                android:backgroundTint="@color/button_color"/>
+                android:backgroundTint="@color/button_color"
+                app:icon="@drawable/ic_back"
+                app:iconGravity="textStart"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
