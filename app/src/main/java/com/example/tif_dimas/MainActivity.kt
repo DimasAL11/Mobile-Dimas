@@ -2,15 +2,14 @@ package com.example.tif_dimas
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tif_dimas.Pertemuan5.FifthActivity
+import com.example.tif_dimas.Pertemuan6.AuthActivity
 import com.example.tif_dimas.databinding.ActivityMainBinding
-import com.example.tif_dimas.databinding.ActivityThirdBinding
 import com.example.tif_dimas.pertemuan4.FourthActivity
 
 class MainActivity : AppCompatActivity() {
@@ -27,8 +26,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+
         binding.btn.setOnClickListener {
-            //Mengambil value dari inputNama dan menampilkan di Logcat
             val intent = Intent(this, FourthActivity::class.java)
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
@@ -37,10 +37,28 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btntofifth.setOnClickListener {
-            //Mengambil value dari inputNama dan menampilkan di Logcat
-            val intent = Intent(this, FifthActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, FifthActivity::class.java))
         }
-        
+
+        binding.btnLogout.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Logout")
+                .setMessage("Apakah kamu yakin ingin keluar?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
+                    dialog.dismiss()
+
+                    val intent = Intent(this, AuthActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
+        }
     }
 }
