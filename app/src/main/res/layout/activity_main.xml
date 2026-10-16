@@ -39,8 +39,8 @@
         android:layout_width="146dp"
         android:layout_height="46dp"
         android:layout_marginTop="28dp"
-        android:text="Halaman 5"
         android:backgroundTint="@color/button_color"
+        android:text="Halaman 5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,5 +55,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btntoseventh"
+        android:layout_width="146dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/button_color"
+        android:text="Halaman 7 "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btntofifth" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

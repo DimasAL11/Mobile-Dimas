@@ -1,18 +1,15 @@
-package com.example.tif_dimas.Pertemuan3
+package com.example.tif_dimas.Home.Pertemuan3
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tif_dimas.R
-import android.widget.EditText
 import android.util.Log
 import android.widget.Toast
 import com.example.tif_dimas.databinding.ActivityThirdBinding
-import com.example.tif_dimas.pertemuan4.FourthActivity
 
 class ThirdActivity : AppCompatActivity() {
 

@@ -1,19 +1,14 @@
-package com.example.tif_dimas.pertemuan4
+package com.example.tif_dimas.Home.pertemuan4
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tif_dimas.MainActivity
-import com.example.tif_dimas.Pertemuan3.ThirdActivity
-import com.example.tif_dimas.Pertemuan3.ThirdResultActivity
 import com.example.tif_dimas.R
 import com.example.tif_dimas.databinding.ActivityFourthBinding
-import com.example.tif_dimas.databinding.ActivityThirdBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
@@ -35,9 +30,9 @@ class FourthActivity : AppCompatActivity() {
         Log.e("Data Intent","Nama: $name , Usia: $age, Asal: $from")
 
         binding.btnkembali.setOnClickListener {
-            //Mengambil value dari inputNama dan menampilkan di Logcat
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
+//            Mengambil value dari inputNama dan menampilkan di Logcat
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
             finish()
         }
         binding.btnShowSnackbar.setOnClickListener {

@@ -7,10 +7,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.tif_dimas.Pertemuan5.FifthActivity
-import com.example.tif_dimas.Pertemuan6.AuthActivity
+import com.example.tif_dimas.Home.Pertemuan5.FifthActivity
+import com.example.tif_dimas.Home.Pertemuan7.SeventhActivity
 import com.example.tif_dimas.databinding.ActivityMainBinding
-import com.example.tif_dimas.pertemuan4.FourthActivity
+import com.example.tif_dimas.Home.pertemuan4.FourthActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -59,6 +59,9 @@ class MainActivity : AppCompatActivity() {
                     dialog.dismiss()
                 }
                 .show()
+        }
+        binding.btntoseventh.setOnClickListener {
+            startActivity(Intent(this, SeventhActivity::class.java))
         }
     }
 }

@@ -1,23 +1,22 @@
-package com.example.tif_dimas.Pertemuan5
+package com.example.tif_dimas.Home.Pertemuan7
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.example.tif_dimas.R
-import com.example.tif_dimas.databinding.ActivityFifthBinding
+import com.example.tif_dimas.databinding.ActivitySeventhBinding
 
-class FifthActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityFifthBinding
+class SeventhActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySeventhBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityFifthBinding.inflate(layoutInflater)
+        binding = ActivitySeventhBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -26,20 +25,24 @@ class FifthActivity : AppCompatActivity() {
         }
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Activity Fifth"
-            subtitle = "Ini adalah subtitle"
+            title = "Halaman Fragment"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-            setHomeAsUpIndicator(R.drawable.ic_back)
+        }
+        // Menampilkan fragment pertama secara default
+        replaceFragment(SatuFragment())
+
+        binding.btnfragment1.setOnClickListener {
+            replaceFragment(SatuFragment())
         }
 
-        binding.btnwebview.setOnClickListener {
-            startActivity(Intent(this,WebViewActivity::class.java))
+        binding.btnfragment2.setOnClickListener {
+            replaceFragment(DuaFragment())
         }
-    }
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return true
+
+        binding.btnfragment3.setOnClickListener {
+            replaceFragment(TigaFragment())
+        }
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
@@ -47,15 +50,14 @@ class FifthActivity : AppCompatActivity() {
                 onBackPressedDispatcher.onBackPressed()
                 true
             }
-            R.id.action_search -> {
-                Toast.makeText(this, "Search Clicked", Toast.LENGTH_SHORT).show()
-                true
-            }
-            R.id.action_settings -> {
-                Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show()
-                true
-            }
+
             else -> super.onOptionsItemSelected(item)
         }
+    }
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(binding.fragmentContainer.id, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }

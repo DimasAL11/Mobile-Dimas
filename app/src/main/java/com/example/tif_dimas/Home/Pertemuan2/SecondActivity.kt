@@ -1,4 +1,4 @@
-package com.example.tif_dimas.Pertemuan2
+package com.example.tif_dimas.Home.Pertemuan2
 
 import android.os.Bundle
 import android.widget.Button

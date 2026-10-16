@@ -1,4 +1,4 @@
-package com.example.tif_dimas.Pertemuan3
+package com.example.tif_dimas.Home.Pertemuan3
 
 import android.os.Bundle
 import android.util.Log

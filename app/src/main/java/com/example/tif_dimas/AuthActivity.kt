@@ -1,9 +1,8 @@
-package com.example.tif_dimas.Pertemuan6
+package com.example.tif_dimas
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tif_dimas.MainActivity
 import com.example.tif_dimas.databinding.ActivityAuthBinding
 
 class AuthActivity : AppCompatActivity() {
@@ -25,7 +24,7 @@ class AuthActivity : AppCompatActivity() {
             editor.putString("username", username)
             editor.apply()
 
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, BaseActivity::class.java))
             finish()
         }
     }
