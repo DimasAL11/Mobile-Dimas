@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tif_dimas.Home.Pertemuan5.FifthActivity
 import com.example.tif_dimas.AuthActivity
+import com.example.tif_dimas.Home.Pertemuan10.TenthActivity
 import com.example.tif_dimas.Home.Pertemuan7.SeventhActivity
 import com.example.tif_dimas.Home.pertemuan4.FourthActivity
 import com.example.tif_dimas.databinding.FragmentHomeBinding
@@ -68,6 +69,10 @@ class HomeFragment : Fragment() {
         }
         binding.btntoseventh.setOnClickListener {
             startActivity(Intent(requireContext(), SeventhActivity::class.java))
+        }
+
+        binding.btntotenth.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
     }
 }

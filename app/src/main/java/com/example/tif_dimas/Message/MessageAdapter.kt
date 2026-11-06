@@ -1,5 +1,6 @@
 package com.example.tif_dimas.Message
 
+import android.R.id.message
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.bumptech.glide.Glide
 import com.example.tif_dimas.databinding.ItemMessageBinding
+import com.google.android.material.snackbar.Snackbar
 
 class MessageAdapter(
     context: Context,
@@ -27,7 +29,13 @@ class MessageAdapter(
         binding.textMessage.text = data.messageText
         binding.textTime.text = data.time
 
-
+        view.setOnClickListener {
+            Snackbar.make(
+                parent,
+                "Pesan dari ${data.senderName}: ${data.messageText} (${data.time})",
+                Snackbar.LENGTH_SHORT
+            ).show()
+        }
         return view
     }
 }
