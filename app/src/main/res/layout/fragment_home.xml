@@ -102,6 +102,16 @@
             app:layout_row="1"
             app:layout_column="1"
             app:layout_columnWeight="1" />
+        <Button
+            android:id="@+id/btntoeleventh"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/button_color"
+            android:text="Halaman 11"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="392dp" />
 
     </androidx.gridlayout.widget.GridLayout>
 
@@ -114,5 +124,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
