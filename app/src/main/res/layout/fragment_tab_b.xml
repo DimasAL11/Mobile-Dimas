@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home.Pertemuan7.SatuFragment"
-    android:background="@color/button_color">
+    android:background="#00BCD4">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Fragment 1"
+        android:text="TAB 2"
         android:textSize="30sp"
         android:textStyle="bold"
         android:gravity="center"

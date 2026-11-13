@@ -29,7 +29,7 @@ class EleventhActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
-        val tabsAdapter = TenthTabsAdapter(this)
+        val tabsAdapter = EleventhTabsAdapter(this)
 
         // 2. Set adapter ke ViewPager2
         binding.viewPager.adapter = tabsAdapter
@@ -49,12 +49,13 @@ class EleventhActivity : AppCompatActivity() {
                 1 ->{
                     tab.text = "Tab B"
                     //Tambah Icon
-                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_home)
+                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_more)
                     //Tambah Badge dengan nomor
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true
                     badge.number = 5
                 }
+                2 -> tab.text = "Product"
             }
         }.attach()
     }
