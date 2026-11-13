@@ -1,10 +1,13 @@
 package com.example.tif_dimas.Home.Pertemuan11
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.tif_dimas.databinding.ItemProductBinding
+import kotlin.math.log
+import kotlin.math.log2
 
 class ProductAdapter(
     private val productList: List<ProductModel>,
@@ -35,6 +38,8 @@ class ProductAdapter(
                 onItemClick(item)
             }
         }
+
+        Log.e("test rv", item.name)
     }
 
     override fun getItemCount(): Int = productList.size
